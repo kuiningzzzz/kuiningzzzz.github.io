@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Self-Introduction"
+title: "关于我"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -12,10 +12,9 @@ redirect_from:
 
 网站建设中...
 
-<h2>Pageviews</h2>
-在你修改之前, 这里不是你的网站的访问信息
-<script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=tt&d=TotgUc16tGNawSb8uG8ApnWC8tMLjeLuiR0R0d9Wb8w'></script>
-<h2>Contact me</h2>
+<h2>访客记录：</h2>
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=A1aDMek8YmydT6zdOytnikKD69k05dPRYj2tK_yfC0c&cl=ffffff&w=a"></script>
+<h2>联系我！</h2>
 
 
 [Email](mailto:2400013118@stu.pku.edu.cn) / [Github](https://github.com/kuiningzzzz) / [Wechat](../images/wechat.png) 
