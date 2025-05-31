@@ -82,18 +82,17 @@ author_profile: true
 <br/>
 
 <!-- Giscus 评论系统嵌入 -->
-
 <script src="https://giscus.app/client.js"
         data-repo="kuiningzzzz/kuiningzzzz.github.io"
-        data-repo-id="R_kgDOKfCXRQ"
+        data-repo-id="R_kgDOOzwQlg"
         data-category="Announcements"
-        data-category-id="DIC_kwDOKfCXRc4CknGa"
+        data-category-id="DIC_kwDOOzwQls4Cq3Je"
         data-mapping="url"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="1"
         data-input-position="top"
-        data-theme="light"
+        data-theme="light_high_contrast"
         data-lang="zh-CN"
         data-loading="lazy"
         crossorigin="anonymous"
