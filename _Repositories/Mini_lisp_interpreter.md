@@ -4,7 +4,7 @@ collection: Repositories
 type: "Repositories"
 permalink: /Repositories/lisp_interpreter
 venue: "Peking Univercity"
-date: 2025-5-22
+date: 2025-05-22
 location: "Beijing, China"
 ---
 软件设计实践课程大作业：Mini_lisp解释器
