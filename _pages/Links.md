@@ -58,7 +58,7 @@ author_profile: true
 
 <h2>下载专区</h2>
 <ul>
-  <li><a href="../files/北京大学2025春季课表.xlsx">北京大学2025年春季课表(可搜索)</a></li>
+  <li><a href="../files/深入理解计算机系统.pdf">深入理解计算机系统(pdf)</a></li>
 </ul>
 
 <h2>友链</h2>
@@ -82,10 +82,9 @@ author_profile: true
 <br/>
 
 <!-- Giscus 评论系统嵌入 -->
-在你修改前, 这个评论区不是你的
 
 <script src="https://giscus.app/client.js"
-        data-repo="ICUlizhi/ICUlizhi.github.io"
+        data-repo="kuiningzzzz/kuiningzzzz.github.io"
         data-repo-id="R_kgDOKfCXRQ"
         data-category="Announcements"
         data-category-id="DIC_kwDOKfCXRc4CknGa"
