@@ -191,9 +191,6 @@ collections:
   Repositories:
     output: true
     permalink: /:collection/:path/
-  Notes:
-    output: true
-    permalink: /:collection/:path/
   Blogs:
     output: true
     permalink: /:collection/:path/
@@ -263,15 +260,6 @@ defaults:
   - scope:
       path: ""
       type: Repositories
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _Notes
-  - scope:
-      path: ""
-      type: Notes
     values:
       layout: single
       author_profile: true
