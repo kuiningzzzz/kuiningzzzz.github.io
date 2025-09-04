@@ -1,3 +1,10 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 title: Jiayu Zhang's Pages
 description: Bookmark this to keep an eye on my project updates!
+url: "https://kuiningzzzz.github.io"
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
