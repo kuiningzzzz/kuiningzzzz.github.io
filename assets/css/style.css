@@ -57,6 +57,9 @@ body {
   color: #ff9800;
 }
 
+/* 头像 */
+.avatar { width: 100%; border-radius: 50%; display: block; }
+
 /* 多列布局 */
 .columns {
   display: grid;

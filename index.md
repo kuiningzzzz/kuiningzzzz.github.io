@@ -5,7 +5,7 @@ title: 首页
 
 <div class="columns">
   <div class="card">
-    ![头像](assets/images/yui.png){:style="width:100%;border-radius:50%;"}
+    <img class="avatar" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="头像" loading="lazy" />
     <h2>你好，我是XXX</h2>
     <p>北京大学计算机科学学生，热爱AI、算法、系统设计。</p>
   </div>
