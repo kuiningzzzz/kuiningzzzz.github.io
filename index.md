@@ -3,17 +3,21 @@ layout: default
 title: 首页
 ---
 
-![我的头像](assets/images/yui.png){:style="width:200px;border-radius:50%;"}
+<div class="columns">
+  <div class="card">
+    ![头像](assets/images/yui.png){:style="width:100%;border-radius:50%;"}
+    <h2>你好，我是XXX</h2>
+    <p>北京大学计算机科学学生，热爱AI、算法、系统设计。</p>
+  </div>
 
-你好！我是 **张嘉宇**，一名来自北京大学的计算机科学学生。  
-这里是我的学习、项目与生活记录。欢迎联系我！
-
-- 🔭 研究方向：人工智能、算法、系统设计
-- 📚 兴趣爱好：阅读、旅行、编程
-- 📧 邮箱：[2400013118@stu.pku.edu.cn](2400013118@stu.pku.edu.cn)
-
-# test
-
-## test1
-- aaa
-- bbb
+  <div class="card">
+    <h2>欢迎来到我的主页</h2>
+    <p>在这里你可以了解我的项目经历、学习记录和联系方式。  
+    我对计算机科学的探索从算法理论到系统实践，希望通过技术创造价值。</p>
+    <p>
+      - 🔭 专注于：深度学习、算法优化  
+      - 🎯 爱好：阅读、跑步、旅行  
+      - 📧 联系我：[me@example.com](mailto:me@example.com)
+    </p>
+  </div>
+</div>
