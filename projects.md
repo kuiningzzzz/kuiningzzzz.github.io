@@ -28,7 +28,7 @@ title: 项目
     <p>我在北京大学《人工智能基础》课程的大作业项目，仅供学习使用</p>
     <div class="button-container">
       <a href="https://github.com/kuiningzzzz/AIGC_checker-reducer" target="_blank">查看仓库</a>
-      <a href="project/AIGC_checker-reducer.md">项目详情</a>
+      <a href="project/AIGC_checker-reducer.md" class="secondary">项目详情</a>
     </div>
   </div>
 
@@ -38,7 +38,7 @@ title: 项目
     <p>我在北京大学《JavaScript语言与Web设计》课程的大作业项目，仅供学习使用</p>
     <div class="button-container">
       <a href="https://github.com/kuiningzzzz/Peking_University_Must-Eating_List" target="_blank">查看仓库</a>
-      <a herf="project/PKU_must-eating_list.md">项目详情</a>
+      <a herf="project/PKU_must-eating_list.md" class="secondary">项目详情</a>
     </div>
   </div>
 </div>
