@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
+
 <body>
   {% include header.html %}
   <div class="container">
@@ -13,5 +15,130 @@
     </main>
   </div>
   {% include footer.html %}
+  <script>
+    // 语言管理器
+    const LanguageManager = {
+      currentLang: 'zh-CN',
+      translations: {},
+
+      // 初始化
+      init: function () {
+        // 检查本地存储中的语言偏好
+        if (localStorage.getItem('language')) {
+          this.currentLang = localStorage.getItem('language');
+        }
+
+        // 加载当前语言
+        this.loadLanguage(this.currentLang).then(() => {
+          this.updatePage();
+
+          // 添加语言切换按钮事件监听
+          document.getElementById('languageSwitch').addEventListener('click', () => {
+            this.switchLanguage();
+          });
+        });
+      },
+
+      // 加载语言文件
+      loadLanguage: function (lang) {
+        return fetch(`languages/${lang}.json`)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('语言文件加载失败');
+            }
+            return response.json();
+          })
+          .then(data => {
+            this.translations[lang] = data;
+            return true;
+          })
+          .catch(error => {
+            console.error('加载语言文件时出错:', error);
+            // 如果目标语言文件不存在，尝试加载默认语言
+            if (lang !== 'zh-CN') {
+              return this.loadLanguage('zh-CN');
+            }
+            return false;
+          });
+      },
+
+      // 切换语言
+      switchLanguage: function () {
+        const newLang = this.currentLang === 'zh-CN' ? 'en' : 'zh-CN';
+        this.setLanguage(newLang);
+      },
+
+      // 设置语言
+      setLanguage: function (lang) {
+        // 显示加载状态
+        const spinner = document.getElementById('languageSpinner');
+        const buttonText = document.getElementById('languageText');
+        const contentArea = document.getElementById('contentArea');
+
+        spinner.style.display = 'inline-block';
+        buttonText.textContent = lang === 'zh-CN' ? '切换中...' : 'Switching...';
+        contentArea.classList.add('fade-out');
+
+        // 加载新语言
+        this.loadLanguage(lang).then(success => {
+          if (success) {
+            this.currentLang = lang;
+            localStorage.setItem('language', lang);
+            this.updatePage();
+            this.showNotification(`语言已切换至 ${lang === 'zh-CN' ? '中文' : 'English'}`);
+          }
+
+          // 隐藏加载状态
+          spinner.style.display = 'none';
+          this.updateButtonText();
+          contentArea.classList.remove('fade-out');
+        });
+      },
+
+      // 更新页面内容
+      updatePage: function () {
+        // 更新所有带有data-i18n属性的元素
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (this.translations[this.currentLang] && this.translations[this.currentLang][key]) {
+            element.textContent = this.translations[this.currentLang][key];
+          }
+        });
+
+        // 更新HTML lang属性
+        document.documentElement.lang = this.currentLang;
+
+        // 更新按钮文本
+        this.updateButtonText();
+      },
+
+      // 更新按钮文本
+      updateButtonText: function () {
+        const buttonText = document.getElementById('languageText');
+        if (this.currentLang === 'zh-CN') {
+          buttonText.textContent = '切换至英文';
+        } else {
+          buttonText.textContent = 'Switch to Chinese';
+        }
+      },
+
+      // 显示通知
+      showNotification: function (message) {
+        const notification = document.getElementById('notification');
+        notification.textContent = message;
+        notification.classList.add('show');
+
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 3000);
+      }
+    };
+
+    // 初始化语言管理器
+    document.addEventListener('DOMContentLoaded', function () {
+      LanguageManager.init();
+    });
+  </script>
 </body>
+
 </html>
