@@ -58,7 +58,11 @@ body {
 }
 
 /* 头像 */
-.avatar { width: 100%; border-radius: 50%; display: block; }
+.avatar {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
 
 /* 多列布局 */
 .columns {
@@ -72,6 +76,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
 }
 
 /* 页脚 */
@@ -119,8 +124,17 @@ footer {
   margin: 0 15px 15px;
 }
 
+/* 按钮容器样式 */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+}
+
 .project-card a {
-  align-self: center;
+  flex: 1;
+  text-align: center;
   text-decoration: none;
   background-color: #ff9800;
   color: white;
@@ -131,6 +145,16 @@ footer {
 
 .project-card a:hover {
   background-color: #e68900;
+}
+
+.project-card a.secondary {
+  background-color: transparent;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+}
+
+.project-card a.secondary:hover {
+  background-color: rgba(255, 152, 0, 0.1);
 }
 
 .project-card:hover {

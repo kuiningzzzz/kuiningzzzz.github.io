@@ -12,8 +12,10 @@ title: 项目
     <img src="assets/images/project1.png" alt="项目1">
     <h3>个人主页</h3>
     <p>使用 GitHub Pages 和 Jekyll 搭建的个人网站（即本站）</p>
-    <a href="https://github.com/kuiningzzzz/kuiningzzzz.github.io" target="_blank">查看仓库</a>
-    <a href="project/personal_pages.md">项目详情</a>
+    <div class="button-container">
+      <a href="https://github.com/kuiningzzzz/kuiningzzzz.github.io" target="_blank">查看仓库</a>
+      <a href="project/personal_pages.md" class="secondary">项目详情</a>
+    </div>
   </div>
 </div>
 
