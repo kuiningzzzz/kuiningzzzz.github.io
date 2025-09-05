@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fdfdfd;
-  color: #333;
+  color: #0c65ff;
   line-height: 1.6;
 }
 
@@ -18,7 +18,7 @@ body {
 
 /* 顶部导航栏 */
 .site-header {
-  background-color: #222;
+  background-color: #0c65ff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ff9800;
+  color: #0a45aa;
 }
 
 /* 头像 */
@@ -80,6 +80,12 @@ body {
 
 .card a {
   text-decoration: none;
+  color: #0c65ff;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: #0a45aa;
 }
 
 /* 页脚 */
@@ -139,7 +145,7 @@ footer {
   flex: 1;
   text-align: center;
   text-decoration: none;
-  background-color: #ff9800;
+  background-color: #0c65ff;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
@@ -147,13 +153,13 @@ footer {
 }
 
 .project-card a:hover {
-  background-color: #e68900;
+  background-color: #0a45aa;
 }
 
 .project-card a.secondary {
   background-color: transparent;
-  color: #ff9800;
-  border: 2px solid #ff9800;
+  color: #0c65ff;
+  border: 2px solid #0c65ff;
 }
 
 .project-card a.secondary:hover {
