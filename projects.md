@@ -15,9 +15,11 @@ title: 项目
     <a href="https://github.com/kuiningzzzz/kuiningzzzz.github.io" target="_blank">查看仓库</a>
     <a href="project/personal_pages.md">项目详情</a>
   </div>
+</div>
 
 ## 课程项目
 
+<div class="grid">
   <div class="project-card">
     <img src="assets/images/project2.png" alt="项目2">
     <h3>基于llm的AIGC率检测与降低</h3>
