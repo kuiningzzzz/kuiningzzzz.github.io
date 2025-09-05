@@ -13,9 +13,9 @@ title: 首页
     <p>
       Wechat: pku_cs_quinine
     </p>
-    </p>
-      GitHub: <a href="https://github.com/kuiningzzzz">kuiningzzzz</a>
     <p>
+      GitHub: <a href="https://github.com/kuiningzzzz">kuiningzzzz</a>
+    </p>
   </div>
 
   <div class="card">
