@@ -14,6 +14,22 @@
     /* 左侧橙色装饰条 */
 }
 
+/* 同样的视觉效果也应用到 Rouge / Jekyll 的输出 (.highlight, highlighter-rouge, language-*) */
+.highlight,
+pre.highlight,
+div.highlight,
+.highlighter-rouge .highlight,
+[class*="language-"] .highlight,
+pre.highlight code,
+.highlight code {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    border-radius: 8px;
+    padding: 1em;
+    border-left: 4px solid #ff9800;
+    overflow-x: auto;
+}
+
 /* 针对特定语言元素的样式 */
 .hljs-keyword {
     color: #ff79c6;
@@ -32,21 +48,56 @@
     font-style: italic;
 }
 
+/* 将常见 Rouge token 类映射到相同配色，保证 Rouge 输出也和原来效果一致 */
+.highlight .k,
+.highlight .kr,
+.highlight .kd,
+.highlight .kp,
+.highlight .kt,
+.highlight .nl {
+    color: #ff79c6;
+    font-weight: bold;
+}
+
+.highlight .s,
+.highlight .s2,
+.highlight .sb {
+    color: #a5ff90;
+}
+
+.highlight .c,
+.highlight .cm,
+.highlight .err {
+    color: #6272a4;
+    font-style: italic;
+}
+
+/* 数字类 */
+.highlight .m,
+.highlight .mi {
+    color: #f1fa8c;
+}
+
 /* 滚动条样式（针对过长代码） */
-pre code.hljs {
+pre code.hljs,
+pre.highlight code,
+.highlight code {
     overflow-x: auto;
 }
 
 /* 自定义滚动条 (Webkit 浏览器) */
-pre code.hljs::-webkit-scrollbar {
+pre code.hljs::-webkit-scrollbar,
+pre.highlight code::-webkit-scrollbar {
     height: 8px;
 }
 
-pre code.hljs::-webkit-scrollbar-thumb {
+pre code.hljs::-webkit-scrollbar-thumb,
+pre.highlight code::-webkit-scrollbar-thumb {
     background: #6272a4;
     border-radius: 4px;
 }
 
+/* 为行内代码添加样式 */
 :not(pre)>code {
     background-color: #2d2d2d;
     /* 与代码块相同的深色背景 */
@@ -78,8 +129,8 @@ pre code.hljs::-webkit-scrollbar-thumb {
     /* 平滑的过渡动画 */
 }
 
-/* 确保代码块内的代码不受影响 */
-pre code {
+/* 仅对未被高亮标记的代码块做默认重置，避免覆盖 .hljs / .highlight */
+pre:not(.highlight) code:not(.hljs) {
     background-color: transparent !important;
     color: inherit !important;
     padding: 0 !important;
