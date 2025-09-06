@@ -1,3 +1,5 @@
+/* 本css文件完全由ai生成，只有颜色和参数自己做了一点修改 */
+
 /* 针对所有代码块 */
 .hljs {
     background-color: #2d2d2d;
@@ -43,4 +45,45 @@ pre code.hljs::-webkit-scrollbar {
 pre code.hljs::-webkit-scrollbar-thumb {
     background: #6272a4;
     border-radius: 4px;
+}
+
+:not(pre)>code {
+    background-color: #2d2d2d;
+    /* 与代码块相同的深色背景 */
+    color: #f8f8f2;
+    /* 相同的浅色文字 */
+    padding: 0.2em 0.4em;
+    /* 适当的内边距 */
+    border-radius: 4px;
+    /* 稍小的圆角，更适合行内元素 */
+    border: 1px solid #444;
+    /* 细微的边框，增加层次感 */
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    /* 等宽字体 */
+    font-size: 0.9em;
+    /* 稍小的字号 */
+    line-height: 1.4;
+    /* 行高 */
+    white-space: nowrap;
+    /* 防止内容换行 */
+}
+
+/* 为行内代码添加一些动态效果 */
+:not(pre)>code:hover {
+    background-color: #363636;
+    /* 鼠标悬停时背景稍亮 */
+    border-color: #ff9800;
+    /* 鼠标悬停时边框变为橙色 */
+    transition: all 0.2s ease;
+    /* 平滑的过渡动画 */
+}
+
+/* 确保代码块内的代码不受影响 */
+pre code {
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    white-space: pre !important;
 }
