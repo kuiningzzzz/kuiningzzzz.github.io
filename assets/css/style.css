@@ -64,15 +64,6 @@ body {
   text-decoration: none;
 }
 
-.change-lang:hover {
-  background-color: #fff;
-  color: #0c65ff;
-}
-
-.change-lang a:hover {
-  color: #0c65ff;
-}
-
 .nav-links {
   list-style: none;
   margin: 0;
@@ -158,6 +149,7 @@ footer {
   margin: 0 auto;
 }
 
+/* 响应式 */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
@@ -185,6 +177,7 @@ footer {
   margin: 0 15px 15px;
 }
 
+/* 按钮容器样式 */
 .button-container {
   display: flex;
   justify-content: space-between;
