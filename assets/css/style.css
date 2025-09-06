@@ -29,16 +29,12 @@ body {
   padding: 1em;
 }
 
-/* .logo {
+.logo {
   font-size: 1.5em;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-} */
-
-/* .logo:hover {
-  text-decoration: underline;
-} */
+}
 
 .logo a {
   color: #fff;
