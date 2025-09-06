@@ -15,14 +15,14 @@ title: 攻略
   <div class="project-card">
   <h2>vscode中的c/c++环境配置</h2>
     <div class="button-container">
-      <a href="tutorial/c_in_vscode.md" class="secondary">查看攻略</a>
+      <a href="{{ '/tutorial/c_in_vscode' | relative_url }}" class="secondary">查看攻略</a>
     </div>
   </div>
 
   <div class="project-card">
   <h2>GitHub Pages的构建方法</h2>
     <div class="button-container">
-      <a href="tutorial/github_pages.md" class="secondary">查看攻略</a>
+      <a href="{{ '/tutorial/github_pages' | relative_url }}" class="secondary">查看攻略</a>
     </div>
   </div>
 

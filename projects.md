@@ -14,7 +14,7 @@ title: 项目
     <p>使用 GitHub Pages 和 Jekyll 搭建的个人网站（即本站）</p>
     <div class="button-container">
       <a href="https://github.com/kuiningzzzz/kuiningzzzz.github.io" target="_blank">查看仓库</a>
-      <a href="project/personal_pages.md" class="secondary">项目详情</a>
+      <a href="{{ '/project/personal_pages' | relative_url }}" class="secondary">项目详情</a>
     </div>
   </div>
 </div>
@@ -28,7 +28,7 @@ title: 项目
     <p>北京大学《人工智能基础》课程的大作业项目，仅供学习使用</p>
     <div class="button-container">
       <a href="https://github.com/kuiningzzzz/AIGC_checker-reducer" target="_blank">查看仓库</a>
-      <a href="project/AIGC_checker-reducer.md" class="secondary">项目详情</a>
+      <a href="{{ '/project/AIGC_checker-reducer' | relative_url }}" class="secondary">项目详情</a>
     </div>
   </div>
 
@@ -38,7 +38,7 @@ title: 项目
     <p>北京大学《JavaScript语言与Web设计》课程的大作业项目，仅供学习使用</p>
     <div class="button-container">
       <a href="https://github.com/kuiningzzzz/Peking_University_Must-Eating_List" target="_blank">查看仓库</a>
-      <a herf="project/PKU_must-eating_list.md" class="secondary">项目详情</a>
+      <a herf="{{ '/project/PKU_must-eating_list' | relative_url }}" class="secondary">项目详情</a>
     </div>
   </div>
 </div>
