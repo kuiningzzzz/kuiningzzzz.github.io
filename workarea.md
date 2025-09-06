@@ -4,3 +4,84 @@ title: 工地
 ---
 
 # 这个区域主要用来测试和调试为个人主页开发的新功能和模块，不做展示用，可以忽略
+
+
+# 小游戏
+
+<div class="container">
+    <h1>🦖 小恐龙跳跃游戏</h1>
+    <div class="user-section">
+        <div id="userInfo" class="user-info hidden">
+            <div class="avatar" id="userAvatar">U</div>
+            <div>
+                <div id="userName">用户</div>
+                <div>最高分: <span id="userHighScore">0</span></div>
+            </div>
+        </div>
+        <button id="logoutBtn" class="btn hidden">退出</button>
+    </div>
+    <div class="main-content">
+            <section class="game-section">
+                <canvas id="gameCanvas" width="800" height="400"></canvas>
+                <div class="game-controls">
+                    <div class="score-board">
+                        <div class="score-item">
+                            <div>当前分数</div>
+                            <div class="score-value" id="currentScore">0</div>
+                        </div>
+                        <div class="score-item">
+                            <div>最高分数</div>
+                            <div class="score-value" id="highScore">0</div>
+                        </div>
+                    </div>
+                    <button id="startBtn" class="btn">开始游戏</button>
+                    <p class="instructions">按空格键或点击屏幕让恐龙跳跃</p>
+                </div>
+            </section>
+            <aside class="sidebar">
+                <div class="auth-box">
+                    <div class="auth-tabs">
+                        <div class="auth-tab active" id="loginTab">登录</div>
+                        <div class="auth-tab" id="registerTab">注册</div>
+                    </div>
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginUsername">昵称</label>
+                            <input type="text" id="loginUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">密码</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn">登录</button>
+                    </form>
+                    <form id="registerForm" class="auth-form hidden">
+                        <div class="form-group">
+                            <label for="registerUsername">昵称</label>
+                            <input type="text" id="registerUsername" required>
+                            <small id="usernameError" style="color: #ff4757; display: none;">昵称已存在</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">密码</label>
+                            <input type="password" id="registerPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">确认密码</label>
+                            <input type="password" id="confirmPassword" required>
+                            <small id="passwordError" style="color: #ff4757; display: none;">密码不一致</small>
+                        </div>
+                        <button type="submit" class="btn">注册</button>
+                    </form>
+                </div>
+                <div class="leaderboard">
+                    <h2>🏆 排行榜</h2>
+                    <div class="leaderboard-list" id="leaderboardList">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="jumpgame/auth.js"></script>
+<script src="jumpgame/game.js"></script>
