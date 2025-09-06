@@ -17,8 +17,8 @@ class DinoGame {
             width: 40,
             height: 50,
             velocityY: 0,
-            gravity: 0.8,
-            jumpStrength: 8,
+            gravity: 0.4,
+            jumpStrength: 16,
             isJumping: false
         };
 
