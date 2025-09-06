@@ -9,6 +9,8 @@ title: 攻略
 写在这个界面的多是朋友问过我且我也曾遇到过的问题，应该具有不错的实用性
 
 
+# 以下是攻略分享，每个攻略设有评论区，遇到问题可以留言评论，解决后我会删评并更新攻略（闲聊水评也可以）
+
 <div class="grid">
   <div class="project-card">
   <h2>vscode中的c/c++环境配置</h2>
@@ -23,5 +25,5 @@ title: 攻略
       <a href="tutorial/github_pages.md" class="secondary">查看攻略</a>
     </div>
   </div>
-  
+
 </div>
