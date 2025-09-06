@@ -6,7 +6,7 @@ title: 首页
 <div class="columns">
   <div class="card">
     <img src="{{ '/assets/images/yui.png' | relative_url }}" alt="头像" style="width:100%; border-radius:50%;">
-    <h2>张嘉宇</h2>
+    <h1>张嘉宇</h1>
     <p> 
       邮箱: <a href="mailto:2400013118@stu.pku.edu.cn">2400013118@stu.pku.edu.cn</a>
     </p>
