@@ -27,6 +27,7 @@ title: 攻略
       <a href="{{ '/tutorial/github_pages' | relative_url }}" class="secondary">查看攻略</a>
     </div>
   </div>
+</div>
 
 ## 不正经攻略
 
