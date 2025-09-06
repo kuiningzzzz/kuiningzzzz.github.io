@@ -1,0 +1,46 @@
+/* 针对所有代码块 */
+.hljs {
+    background-color: #2d2d2d;
+    /* 深色背景 */
+    color: #f8f8f2;
+    /* 浅色文字 */
+    border-radius: 8px;
+    /* 圆角 */
+    padding: 1em;
+    /* 内边距 */
+    border-left: 4px solid #ff9800;
+    /* 左侧橙色装饰条 */
+}
+
+/* 针对特定语言元素的样式 */
+.hljs-keyword {
+    color: #ff79c6;
+    /* 关键字改为粉色 */
+    font-weight: bold;
+}
+
+.hljs-string {
+    color: #a5ff90;
+    /* 字符串改为浅绿色 */
+}
+
+.hljs-comment {
+    color: #6272a4;
+    /* 注释改为灰色 */
+    font-style: italic;
+}
+
+/* 滚动条样式（针对过长代码） */
+pre code.hljs {
+    overflow-x: auto;
+}
+
+/* 自定义滚动条 (Webkit 浏览器) */
+pre code.hljs::-webkit-scrollbar {
+    height: 8px;
+}
+
+pre code.hljs::-webkit-scrollbar-thumb {
+    background: #6272a4;
+    border-radius: 4px;
+}
