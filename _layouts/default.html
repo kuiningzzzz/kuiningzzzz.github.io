@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- 引入 i18next -->
+  <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+  <!-- 引入 i18next-http-backend (用于从文件加载翻译资源) -->
+  <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body>
@@ -16,6 +20,21 @@
   </div>
   {% include footer.html %}
   <script>
+    // 配置和使用 i18next
+    i18next
+      .use(i18nextHttpBackend)
+      .init({
+        lng: 'zh-CN',
+        debug: true,
+        backend: {
+          // 加载路径需要根据你的GitHub Pages实际路径进行设置
+          loadPath: '/kuiningzzzz/languages/{{lng}}.json'
+        }
+      }, function (err, t) {
+        // 初始化完毕后的回调
+        document.querySelector('[data-i18n="welcome"]').innerHTML = i18next.t('welcome');
+      });
+
     // 语言管理器
     const LanguageManager = {
       currentLang: 'zh-CN',
