@@ -79,9 +79,18 @@ title: 工地
                     </div>
                 </div>
             </aside>
-        </div>
     </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="jumpgame/auth.js"></script>
 <script src="jumpgame/game.js"></script>
+
+<script src="https://utteranc.es/client.js"
+        repo="kuiningzzzz/kuiningzzzz.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
