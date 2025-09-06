@@ -22,23 +22,23 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* .navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
 }
 
-.logo {
+/* .logo {
   font-size: 1.5em;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
 } */
 
-.logo:hover {
+/* .logo:hover {
   text-decoration: underline;
-}
+} */
 
 .logo a {
   color: #fff;
