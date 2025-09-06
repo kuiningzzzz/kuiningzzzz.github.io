@@ -1,3 +1,8 @@
+---
+layout: default
+title: vscode中的c/c++环境配置
+---
+
 # vscode中的c/c++环境配置
 
 ## 入门篇：能跑helloworld就算成功
