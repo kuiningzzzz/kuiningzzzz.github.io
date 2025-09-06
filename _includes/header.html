@@ -1,11 +1,9 @@
 <header class="site-header">
   <nav class="navbar">
     <div class="logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
-    <a href="https://kuiningzzzz.github.io/en/" id="languageSwitch" data-i18n="langSwitch">切换至英文</a>
-    <button class="change-lang" id="languageSwitch">
-      <span class="spinner" id="languageSpinner"></span>
-      <span id="languageText">切换至英文</span>
-    </button>
+    <div class="change-lang">
+      <a href="https://kuiningzzzz.github.io/en/" id="languageSwitch" data-i18n="langSwitch">切换至英文</a>
+    </div>
     <ul class="nav-links">
       <li><a href="{{ '/' | relative_url }}" data-i18n="index">首页</a></li>
       <li><a href="{{ '/projects' | relative_url }}" data-i18n="projects">项目</a></li>
