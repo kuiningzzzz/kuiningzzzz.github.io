@@ -16,15 +16,12 @@ title: 攻略
       <a href="tutorial/c_in_vscode.md" class="secondary">查看攻略</a>
     </div>
   </div>
-</div>
 
-
-
-<div class="grid">
   <div class="project-card">
   <h2>GitHub Pages的构建方法</h2>
     <div class="button-container">
       <a href="tutorial/github_pages.md" class="secondary">查看攻略</a>
     </div>
   </div>
+  
 </div>
