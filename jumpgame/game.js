@@ -57,7 +57,7 @@ class DinoGame {
     }
 
     start() {
-        this.canvas.onclick = null; // 移除点击事件，防止重复开始
+        
         this.gameOver = false;
         this.score = 0;
         this.obstacles = [];
@@ -69,6 +69,12 @@ class DinoGame {
         }
 
         this.gameLoop();
+    }
+
+    restart() {
+        this.canvas.onclick = null; // 移除点击事件，防止重复开始
+        this.obstacleSpeed = 5;
+        this.start();
     }
 
     gameLoop() {
@@ -136,7 +142,7 @@ class DinoGame {
         this.ctx.fillRect(0, this.height - 10, this.width, 10);
 
         // 绘制恐龙
-        this.ctx.fillStyle = '#28a745';
+        this.ctx.fillStyle = '#0c65ff';
         this.ctx.fillRect(this.dino.x, this.dino.y, this.dino.width, this.dino.height);
 
         // 绘制障碍物
@@ -201,7 +207,7 @@ class DinoGame {
         updateLeaderboard();
 
         // 添加重新开始的事件监听
-        this.canvas.onclick = () => this.start();
+        this.canvas.onclick = () => this.restart();
     }
 }
 
