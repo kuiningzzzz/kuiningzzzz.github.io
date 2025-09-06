@@ -49,7 +49,7 @@ body {
   text-decoration: underline;
 }
 
-.change-lang {
+.change-lang a {
   color: #fff;
   text-decoration: none;
   font-size: 0.9em;
