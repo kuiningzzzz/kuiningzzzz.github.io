@@ -11,6 +11,8 @@ title: 攻略
 
 # 以下是攻略分享，每个攻略设有评论区，遇到问题可以留言评论，解决后我会删评并更新攻略（闲聊水评也可以）
 
+## 正经攻略
+
 <div class="grid">
   <div class="project-card">
   <h2>vscode中的c/c++环境配置</h2>
@@ -23,6 +25,17 @@ title: 攻略
   <h2>GitHub Pages的构建方法</h2>
     <div class="button-container">
       <a href="{{ '/tutorial/github_pages' | relative_url }}" class="secondary">查看攻略</a>
+    </div>
+  </div>
+
+## 不正经攻略
+
+<div class="grid">
+
+  <div class="project-card">
+  <h2>文明六mod编写</h2>
+    <div class="button-container">
+      <a href="{{ '/tutorial/c_in_vscode' | relative_url }}" class="secondary">查看攻略（施工中......）</a>
     </div>
   </div>
 
