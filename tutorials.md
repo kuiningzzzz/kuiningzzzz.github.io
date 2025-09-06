@@ -36,7 +36,7 @@ title: 攻略
   <div class="project-card">
   <h2>文明六mod编写</h2>
     <div class="button-container">
-      <a href="{{ '/tutorial/c_in_vscode' | relative_url }}" class="secondary">查看攻略（施工中......）</a>
+      <a href="{{ '/tutorial/civi_sixth_mod.md' | relative_url }}" class="secondary">查看攻略（施工中......）</a>
     </div>
   </div>
 
