@@ -15,7 +15,7 @@ class UserManager {
         const newUser = {
             id: Date.now().toString(),
             username,
-            password, // 注意：实际应用中应该对密码进行哈希处理
+            password,
             highScore: 0,
             createdAt: new Date().toISOString()
         };

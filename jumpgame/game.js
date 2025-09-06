@@ -57,6 +57,7 @@ class DinoGame {
     }
 
     start() {
+        this.canvas.onclick = null; // 移除点击事件，防止重复开始
         this.gameOver = false;
         this.score = 0;
         this.obstacles = [];
