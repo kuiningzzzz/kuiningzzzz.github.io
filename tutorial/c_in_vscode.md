@@ -33,7 +33,21 @@ title: vscode中的c/c++环境配置
 
 ### 第五步：关于json文件中参数的含义与设置
 
-当你成功完成了第四步时，你的项目目录下应该自动创建了一个名为.vscode的文件夹，并且其中还有一个名为tasks.json的文件。
+当你成功完成了第四步时，你的项目目录下应该自动创建了一个名为.vscode的文件夹，并且其中还有一个名为tasks.json的文件。将页面切换至你的.cpp文件并点击左侧的运行与调试按钮，你会看到蓝字“创建launch.json”，点击，并在上方弹出的选项中选择C++(GDB/LLDB)。进入launch.json，右下角点击添加配置，选择C/C++:(gdb)启动，会自动生成模板。
+
+下面我们来看一下各个.json文件中的参数的含义：
+
+**task.json**
+
+- command
+- args
+
+**launch.json**
+
+- externalConsole
+- miDebuggerPath
+
+
 
 
 ## 进阶篇：Cmake工程构建更加系统的多文件项目
