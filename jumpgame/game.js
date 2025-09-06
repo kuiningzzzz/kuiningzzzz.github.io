@@ -23,8 +23,8 @@ class DinoGame {
         };
 
         this.obstacles = [];
-        this.obstacleSpeed = 5;
-        this.obstacleFrequency = 100; // 帧数
+        this.obstacleSpeed = 2;
+        this.obstacleFrequency = 300; // 帧数
 
         // 游戏循环
         this.frameCount = 0;
@@ -73,7 +73,7 @@ class DinoGame {
 
     restart() {
         this.canvas.onclick = null; // 移除点击事件，防止重复开始
-        this.obstacleSpeed = 5;
+        this.obstacleSpeed = 2;
         this.start();
     }
 
