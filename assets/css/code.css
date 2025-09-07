@@ -8,7 +8,7 @@
     /* 浅色文字 */
     border-radius: 4px;
     /* 圆角 */
-    padding: 0.4em;
+    padding: 0.25em 0.6em;
     /* 内边距 */
     border-left: 4px solid #0c65ff;
     /* 左侧橙色装饰条 */
@@ -25,7 +25,7 @@ pre.highlight code,
     background-color: #2d2d2d;
     color: #f8f8f2;
     border-radius: 4px;
-    padding: 0.4em;
+    padding: 0.25em 0.6em;
     overflow-x: auto;
 }
 
@@ -152,7 +152,8 @@ pre code.hljs {
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
     /* 与行内代码一致的等宽字体栈 */
     font-size: 0.9em;               /* 与行内代码保持一致（可按需微调） */
-    line-height: 1.4;               /* 增加行高，避免文字被裁切 */
+    line-height: 1.25;               /* 增加行高，避免文字被裁切 */
+    margin: 0;                      /* 移除默认外边距，避免影响布局 */
     white-space: pre;               /* 保持原始换行/空白 */
     overflow-x: auto;               /* 超长时横向滚动，不裁切内容 */
 }
