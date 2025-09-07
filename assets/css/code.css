@@ -138,3 +138,40 @@ pre:not(.highlight) code:not(.hljs) {
     border: none !important;
     white-space: pre !important;
 }
+
+/* 统一代码块的基本样式，防止不同渲染器输出差异导致裁切 */
+pre,
+pre code,
+pre.highlight,
+.highlight pre,
+.highlight code,
+.codehilite,
+.hljs,
+pre code.hljs {
+    display: block;                 /* 确保占据整行，避免内联布局导致垂直剪裁 */
+    box-sizing: border-box;         /* 让 padding 不影响高度计算 */
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    /* 与行内代码一致的等宽字体栈 */
+    font-size: 0.9em;               /* 与行内代码保持一致（可按需微调） */
+    line-height: 1.4;               /* 增加行高，避免文字被裁切 */
+    vertical-align: baseline;       /* 避免子元素出现偏移 */
+    white-space: pre;               /* 保持原始换行/空白 */
+    overflow-x: auto;               /* 超长时横向滚动，不裁切内容 */
+}
+
+/* 确保代码内的 span/标记继承 line-height，防止子元素单独导致裁切 */
+pre code span,
+.highlight code span,
+.codehilite span {
+    line-height: inherit;
+    vertical-align: baseline;
+}
+
+/* 对行内代码保持现有样式（已存在），这里只是确保尺寸一致 */
+:not(pre)>code {
+    /* ...existing code... */
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+/* ...existing code... */
