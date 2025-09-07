@@ -50,7 +50,7 @@ url: "https://kuiningzzzz.github.io"
 baseurl: ""
 ```
 - theme：网页的主题风格，更多主题风格可以查阅互联网相关信息，minimal轻量简约又基础，我比较喜欢
-- title：在html文本里通过`{{site.title}}`语句指代的内容，字面意思，是你网页的标题
+- title：在html文本里通过`\{\{site.title\}\}`语句指代的内容，字面意思，是你网页的标题
 - description：字面意思，网页的描述或介绍，在我的主页中用处不大
 - url/baseurl：寻址，会涉及到你之后编写其他页面时网页去哪里读取你的网页资源信息等问题。一般对于每个GitHub账号仅有一个的个人主页而言，url就写https://你的GitHub名称.github.io，baseurl打一对双引号留空即可。
 
