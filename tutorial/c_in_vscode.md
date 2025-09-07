@@ -145,8 +145,6 @@ add_executable(main 你的.cpp文件路径)
 施工中......
 
 
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-
 <script src="https://utteranc.es/client.js"
         repo="kuiningzzzz/kuiningzzzz.github.io"
         issue-term="pathname"
