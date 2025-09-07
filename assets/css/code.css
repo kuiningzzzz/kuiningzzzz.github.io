@@ -6,9 +6,9 @@
     /* 深色背景 */
     color: #f8f8f2;
     /* 浅色文字 */
-    border-radius: 8px;
+    border-radius: 4px;
     /* 圆角 */
-    padding: 1em;
+    padding: 0.4em;
     /* 内边距 */
     border-left: 4px solid #0c65ff;
     /* 左侧橙色装饰条 */
@@ -24,14 +24,14 @@ pre.highlight code,
 .highlight code {
     background-color: #2d2d2d;
     color: #f8f8f2;
-    border-radius: 8px;
-    padding: 1em;
+    border-radius: 4px;
+    padding: 0.4em;
     overflow-x: auto;
 }
 
 /* 针对特定语言元素的样式 */
 .hljs-keyword {
-    color: #3a57fe;
+    color: #6075ec;
     /* 关键字改为蓝色 */
     font-weight: bold;
 }
@@ -54,7 +54,7 @@ pre.highlight code,
 .highlight .kp,
 .highlight .kt,
 .highlight .nl {
-    color: #3a57fe;
+    color: #6075ec;
     font-weight: bold;
 }
 
@@ -93,7 +93,7 @@ pre.highlight code::-webkit-scrollbar {
 pre code.hljs::-webkit-scrollbar-thumb,
 pre.highlight code::-webkit-scrollbar-thumb {
     background: #6272a4;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 /* 为行内代码添加样式 */
