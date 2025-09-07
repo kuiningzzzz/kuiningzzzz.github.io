@@ -9,6 +9,8 @@ GitHub Pages是GitHub提供的静态网页托管平台，一般分为个人Page�
 
 接下来本文会以我的个人主页为例，讲解GitHub Pages的搭建方法。
 
+ps：注意：下面的某些代码语句中你会看到反斜杠和大括号在一起，那是作为转义字符使用的，实际编写时你程序中只需要输入大括号，这里加了反斜杠是因为尽管身处代码块中，Jekyll依然会将两对大括号中间的内容加载为其指代的内容。
+
 ## 一、关于模板的使用
 
 搭建GitHub Pages有两个路子可以走：找模板fork一下再填内容，或者自己从零开始编写HTML、CSS、JS三件套。主页模板在GitHub上可以找到很多，网上搜索可以搜到各种模板，你要做的只是跟随模板的README指引，了解哪个参数是用来做什么的，然后将其改为自己的信息即可。套模板填内容比较容易，网上能搜到的教程大多也都是这种，本文不再说明，这里推荐我的一位学长的[个人主页模板](https://github.com/ICUlizhi/academicpages-stu-)，比较适合学生使用。
@@ -68,7 +70,7 @@ title: 首页
 ```
 
 - layout后跟的参数是你接下来要在_layout目录中新建的html文件的去拓展名名字，这里我们姑且假设你在_layouts文件夹里新建了一个名为default.html的文件
-- title仍是字面意思，和_config.yml中的title不同的是这个title的内容通过`{{page.title}}`
+- title仍是字面意思，和_config.yml中的title不同的是这个title的内容通过`\{\{page.title\}\}`进行访问
 
 ### _layouts目录
 
@@ -82,14 +84,14 @@ title: 首页
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <title>\{\{ page.title \}\} | \{\{ site.title \}\}</title>
+  <link rel="stylesheet" href="\{\{ '/assets/css/style.css' | relative_url \}\}">
 </head>
 <body>
   {% include header.html %}
   <div class="container">
     <main>
-      {{ content }}
+      \{\{ content \}\}
     </main>
   </div>
   {% include footer.html %}
@@ -181,7 +183,7 @@ body {
 ```html
 <header class="site-header">
   <nav class="navbar">
-    <div class="logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
+    <div class="logo"><a href="\{\{ '/' | relative_url \}\}">\{\{ site.title \}\}</a></div>
   </nav>
 </header>
 ```
@@ -194,28 +196,28 @@ body {
 
 其中的class设置都是为了呼应.css文件中的一些部分，这里不再解释。
 
-我们在header中看到了`<a>`元素，这是链接的意思；`{{ site.title }}`之前说过是_config文件中title的内容。所以不考虑css的情况下，这个页眉的效果是：有一行字内容为你设置的title，点击title时，网页会跳转至`{{ '/' | relative_url }}`。这是哪里？Jekyll解析时，relative_url的值受到我们在_config中设置的url/baseurl的影响，在这里，这个地址会解析为我们在网页的根地址后跟一个前面的斜杠，这就是我们主页本身，所以跳转的结果是还会回到这一首页界面。
+我们在header中看到了`<a>`元素，这是链接的意思；`\{\{ site.title \}\}`之前说过是_config文件中title的内容。所以不考虑css的情况下，这个页眉的效果是：有一行字内容为你设置的title，点击title时，网页会跳转至`\{\{ '/' | relative_url \}\}`。这是哪里？Jekyll解析时，relative_url的值受到我们在_config中设置的url/baseurl的影响，在这里，这个地址会解析为我们在网页的根地址后跟一个前面的斜杠，这就是我们主页本身，所以跳转的结果是还会回到这一首页界面。
 
 受此启发，我们可以制作一个导航栏。于是我们的header.html文件或许可以变成这样：
 
 ```html
 <header class="site-header">
   <nav class="navbar">
-    <div class="logo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
+    <div class="logo"><a href="\{\{ '/' | relative_url }}">\{\{ site.title \}\}</a></div>
     <ul class="nav-links">
-      <li><a href="{{ '/' | relative_url }}">首页</a></li>
-      <li><a href="{{ '/projects' | relative_url }}">项目</a></li>
-      <li><a href="{{ '/note' | relative_url }}">笔记</a></li>
+      <li><a href="\{\{ '/' | relative_url \}\}">首页</a></li>
+      <li><a href="\{\{ '/projects' | relative_url \}\}">项目</a></li>
+      <li><a href="\{\{ '/note' | relative_url \}\}">笔记</a></li>
     </ul>
   </nav>
 </header>
 ```
 
-与此同时，我们会在项目的根目录下与index.md并列新建几个文件：`projects.md`、`note.md`。注意，在html的双大括号中，文件名没有加.md后缀，但是实际我们建立的文件是需要有.md或者.html后缀的，这是Jekyll解析的语法规则问题。我们看到链接指向了`{{ '/projects' | relative_url }}`这个地址。实际上，在访问网页时，当你在网址栏输入 你的GitHub名称.github.io/projects 时，进入到的正是这一界面。似乎对寻址和链接有些感觉了？那我们再继续看看自己新建的文件夹和新建文件夹的寻址。
+与此同时，我们会在项目的根目录下与index.md并列新建几个文件：`projects.md`、`note.md`。注意，在html的双大括号中，文件名没有加.md后缀，但是实际我们建立的文件是需要有.md或者.html后缀的，这是Jekyll解析的语法规则问题。我们看到链接指向了`\{\{ '/projects' | relative_url \}\}`这个地址。实际上，在访问网页时，当你在网址栏输入 你的GitHub名称.github.io/projects 时，进入到的正是这一界面。似乎对寻址和链接有些感觉了？那我们再继续看看自己新建的文件夹和新建文件夹的寻址。
 
 ### 自建文件夹
 
-我自己的主页中有一个板块是[项目](https://kuiningzzzz.github.io/projects)，进去之后你会看到有若干项目卡片，拿个人主页的项目举例，我们点进去“项目详情”，随后看到我们的网页地址栏跳转到这样一个网址：`https://kuiningzzzz.github.io/project/personal_pages`。如果你去看这个主页的仓库就会看到源码结构：我新建了一个名为project的仓库并放入了personal_pages.md文件，而在按钮的跳转链接中我写的地址是`{{ '/project/personal_pages' | relative_url }}`。以此类推，你也可以自己新建文件夹寻址。
+我自己的主页中有一个板块是[项目](https://kuiningzzzz.github.io/projects)，进去之后你会看到有若干项目卡片，拿个人主页的项目举例，我们点进去“项目详情”，随后看到我们的网页地址栏跳转到这样一个网址：`https://kuiningzzzz.github.io/project/personal_pages`。如果你去看这个主页的仓库就会看到源码结构：我新建了一个名为project的仓库并放入了personal_pages.md文件，而在按钮的跳转链接中我写的地址是`\{\{ '/project/personal_pages' | relative_url \}\}`。以此类推，你也可以自己新建文件夹寻址。
 
 ### 至此，再将你新增的部分的css配置好，你就已经拥有了一个比较健全完整（至少能用了）的个人主页了！
 
