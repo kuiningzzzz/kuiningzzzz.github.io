@@ -128,7 +128,7 @@ title: vscode中的c/c++环境配置
 
 在根目录新建一个名为CmakeLists.txt的文件，我们先在里面输入如下指令，在下一步会解释这些指令的含义：
 
-```CmakeLists.txt
+```text
 
 cmake_minimum_required(VERSION 3.18.0)
 project(HelloWorld)
