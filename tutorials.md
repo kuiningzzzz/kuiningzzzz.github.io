@@ -24,6 +24,7 @@ title: 攻略
 
   <div class="project-card">
   <h2>GitHub Pages的构建方法</h2>
+  <p>施工中......</p>
     <div class="button-container">
       <a href="{{ '/tutorial/github_pages' | relative_url }}" class="secondary">查看攻略</a>
     </div>
@@ -36,6 +37,7 @@ title: 攻略
 
   <div class="project-card">
   <h2>文明六mod编写</h2>
+  <p>施工中......</p>
     <div class="button-container">
       <a href="{{ '/tutorial/civi_sixth_mod' | relative_url }}" class="secondary">查看攻略</a>
     </div>

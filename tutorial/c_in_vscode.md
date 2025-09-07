@@ -180,6 +180,14 @@ add_executable(main 你的.cpp文件路径)
 
 至此，你已经可以把VScode基本作为自己完成C/C++代码的主阵地了。深入了解这款IDE的强大之后，我建议你点击IDE左下角的小齿轮，进入到配置文件页，为自己配置的C环境单独成立一套配置文件（比如用了哪些拓展、哪些工作目录用到了这套配置文件，以及片段、键盘快捷方式等不少定制化内容），之后当你在IDE上配置更多种语言环境时可以便捷切换和组合，使IDE的功能和逻辑更为清晰。祝学习愉快、工作顺利！
 
+
+# 评论区
+PS：评论之后，你的GitHub账号会在我的仓库的Issues模块留下评论，此时有可能会自动关注这条Issue，之后再有人有新的评论时，可能会向你GitHub账号的邮箱发送提醒。
+
+如果你不想接收这一提醒，可以去到[我仓库的Issue界面](https://github.com/kuiningzzzz/kuiningzzzz.github.io/issues)，找到你评论所在区域对应的Issue，并点进去后在右下角的Notifications选项中取消掉Subscribe。
+
+如果你想一劳永逸再也不自动订阅这一提醒，可以去你自己账号的Settings界面，点击左边Notifications，在右半Subscriptions中的Customize email updates中取消掉Comments on Issues选项并点击Save保存确定即可。
+
 <script src="https://utteranc.es/client.js"
         repo="kuiningzzzz/kuiningzzzz.github.io"
         issue-term="pathname"
