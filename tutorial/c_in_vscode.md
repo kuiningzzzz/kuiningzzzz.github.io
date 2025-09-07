@@ -69,7 +69,7 @@ title: vscode中的c/c++环境配置
         "_DEBUG",
         "UNICODE"
       ],
-      "compilerPath": "C:/mingw64/bin/gcc.exe", // 关键！设置后很多路径会自动填充
+      "compilerPath": "C:/mingw64/bin/gcc.exe", // 设置后很多路径会自动填充
       "cStandard": "c17",
       "cppStandard": "c++17",
       "intelliSenseMode": "windows-gcc-x64"
