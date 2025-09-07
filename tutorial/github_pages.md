@@ -88,20 +88,20 @@ title: 首页
   <link rel="stylesheet" href="\{\{ '/assets/css/style.css' | relative_url \}\}">
 </head>
 <body>
-  {% include header.html %}
+  \{\% include header.html \%\}
   <div class="container">
     <main>
       \{\{ content \}\}
     </main>
   </div>
-  {% include footer.html %}
+  \{\% include footer.html \%\}
 </body>
 </html>
 ```
 
 学过一些HTML的同学应该能看懂这个网页的结构了。整个HTML元素分为两个元素：head和body。在head中，我们进行了字符编码方式的设定、网页标题的设定（这就是为什么你现在正在看的这个界面叫做“攻略 | xxx的个人主页”了），并且链接了一份style.css文件，这个文件是建立在assets目录下的css文件夹内的，我们之后谈css配置的时候再说，现在可以先去建个空的文件。
 
-重要的是body中的内容，这是整个网站的主干结构。我们希望我们的每个页面都由同样的页眉页脚和不同的展示内容组成。于是我们也是这样设计的：`\{% include header.html %\}`和`\{% include footer.html %\}`对应的是_includes目录下的header.html和footer.html文件的内容（这俩文件也是需要我们自己新建自己编写的），中间夹着的container容器中，则放着我们不同界面要展示的内容content。
+重要的是body中的内容，这是整个网站的主干结构。我们希望我们的每个页面都由同样的页眉页脚和不同的展示内容组成。于是我们也是这样设计的：`\{\% include header.html \%\}`和`\{\% include footer.html \%\}`对应的是_includes目录下的header.html和footer.html文件的内容（这俩文件也是需要我们自己新建自己编写的），中间夹着的container容器中，则放着我们不同界面要展示的内容content。
 
 这个content是代指什么呢？用个通俗易懂的说法，代指的是这个模板文件default.html的使用者——还记得我们的首页文件最前面加上了一句`layout: default`吗？这样，当我们访问首页时，看到的其实是模板文件将content置换为首页内容的代码，这样的模板实现了代码复用，因为对于每个使用这一模板的界面而言，除了content以外其他的部分都是完全相同的（当然，content并不是直接替换为使用者，至少还得经过一个把使用者的markdown格式转换为html格式的步骤）。
 
