@@ -16,6 +16,7 @@ title: 攻略
 <div class="grid">
   <div class="project-card">
   <h2>vscode中的c/c++环境配置</h2>
+  <p>针对Windows端的C/C++环境配置以及Cmake工具的使用</p>
     <div class="button-container">
       <a href="{{ '/tutorial/c_in_vscode' | relative_url }}" class="secondary">查看攻略</a>
     </div>
@@ -36,7 +37,7 @@ title: 攻略
   <div class="project-card">
   <h2>文明六mod编写</h2>
     <div class="button-container">
-      <a href="{{ '/tutorial/civi_sixth_mod.md' | relative_url }}" class="secondary">查看攻略（施工中......）</a>
+      <a href="{{ '/tutorial/civi_sixth_mod' | relative_url }}" class="secondary">查看攻略</a>
     </div>
   </div>
 
