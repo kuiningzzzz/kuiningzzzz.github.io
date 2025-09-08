@@ -24,9 +24,17 @@ title: 攻略
 
   <div class="project-card">
   <h2>GitHub Pages的构建方法</h2>
-  <p>施工中......</p>
+  <p>fork一个现成的主页模板？或者自己从零开始写一份主页文件？总之建个repo先！</p>
     <div class="button-container">
       <a href="{{ '/tutorial/github_pages' | relative_url }}" class="secondary">查看攻略</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+  <h2>vscode中的python环境配置</h2>
+  <p>施工中......</p>
+    <div class="button-container">
+      <a href="{{ '/tutorial/python_in_vsvode' | relative_url }}" class="secondary">查看攻略</a>
     </div>
   </div>
 </div>

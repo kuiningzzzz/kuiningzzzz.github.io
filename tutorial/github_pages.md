@@ -225,9 +225,20 @@ body {
 
 第四段会持续更新一些有趣的主页小组件搭建方式，敬请期待！
 
-### 基于Issues的评论区系统Utterances：静态网页的动态一角
+### 基于Issues的评论区系统：Utterances
 
-施工中......
+我们知道，GitHub Pages支持托管的是静态网页，实时评论区这种功能其实已经属于动态网页的范畴了。不过除了使用服务器作为后端数据平台以外，我们还有别的办法搭建评论区，比如使用Utterances。Utterances是一个GitHub APP，使用Utterances的开发者的服务器对信息进行处理，并将评论保存在你自己仓库的Issues中。
+
+首先我们要开启仓库的Issues功能并安装Utterances。首先我们进入Utterances的[安装页面](https://github.com/apps/utterances)，订阅并经过一系列认证之后，你会进到你账号的设置界面，右边是关于你使用这一APP的相关信息。我们选择Only select repositories，并勾选自己的主页仓库，即可为自己的主页安装这一功能了。随后进到你的仓库，看你主页的仓库上边栏是否有Issues模块，如果有就不用动，没有的话，点击上边栏的Settings模块，直接往下翻（在General选项下），找到Feature并将其中的Issues选项勾选即可开启Issues功能。
+
+随后我们来到Utterances官方的[评论区文件配置页面](https://utteranc.es/)，在configuration的下方，从repo填上“账号名/账号名.github.io”开始到后面所有内容全部填写完整，即可在下方看到自动生成的script脚本元素和copy按钮，把它copy放到你想要放到的位置即可，这就是评论区。至于填写内容的攻略如下：
+
+- Repository：账号名/账号名.github.io
+- Blog Post ↔️ Issue Mapping：可以开翻译自行查看选项含义，主要控制评论之后在你Issues中生成的Issue的名字。比如我选择了第一项，那么当有人在我的名为pojects的页面进行评论时，就会产生一个名为projects（新文件夹内的界面是路径，即 文件夹名/界面文件名）的Issue。
+- Issue Label：GitHub的Issue本身就可以挂标签Label，功能就是如此，可以直接默认设置为“Comment”即可
+- Theme：评论区的主题款式。
+
+之后你可以找几个朋友去给你评论测试一下。正如我下方评论区所说，评论之后，评论者的GitHub账号会在仓库的Issues模块留下评论，此时有可能会自动关注这条Issue，之后再有人有新的评论时，可能会向GitHub账号的邮箱发送提醒。我的这个问题尚未得到解决，目前的做法是在评论区给观看者提醒并教其如何取消订阅和取消自动订阅（哭），如果有友友提出了解决方案可以联系我！（当然，直接更换评论区的构建方式用别家的或者自己搭建肯定是能解决问题的了，不过Utterances也有它的好嘛）
 
 ### 持续更新中！
 
