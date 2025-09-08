@@ -34,7 +34,7 @@ title: 攻略
   <h2>vscode中的python环境配置</h2>
   <p>施工中......</p>
     <div class="button-container">
-      <a href="{{ '/tutorial/python_in_vsvode' | relative_url }}" class="secondary">查看攻略</a>
+      <a href="{{ '/tutorial/python_in_vscode' | relative_url }}" class="secondary">查看攻略</a>
     </div>
   </div>
 </div>
