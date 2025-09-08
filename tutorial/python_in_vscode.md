@@ -31,3 +31,58 @@ vscode的下载安装也在C环境的攻略中提到过。我们需要去[官网
 
 ## 进阶篇：conda的使用和管理
 
+conda的作用实际上是将你不同的python环境打包成虚拟环境供程序运行。先不说不同的程序可能需要的python解释器版本不同的情况，当我们import第三方库的时候通常需要先通过pip或其他包管理工具等将某些库安装至本地，而不同的程序需要的库往往不同，我们不能总是让所有程序都运行在同一个环境下，给每个程序都单独配置一遍环境单独安装一堆库也是低效、浪费、不现实的。同时，你会经常遇到这个程序“在我的电脑上没问题啊为什么带到这个电脑上就跑不了了”，这往往是因为程序身处的环境不同引起的问题，如果我们能直接把环境作为文件同样打包出去就好了。所以我们需要虚拟环境出场。（当然，解决可移植性问题的更好的办法是使用docker，但在这篇文章中我们暂且不谈）
+
+### 第一步：安装anaconda
+
+可以直接去[官网](https://www.anaconda.com/download)下载，不过更方便的做法是去[清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)下载，挑选适合自己操作系统的版本即可。下载好后双击安装包进行安装，记得勾选Add PATH和Register as default两个Advanced Options选项。安装后依然去cmd控制台测试，输入`conda --version`返回版本号即成功。
+
+### 第二步：使用conda指令构建环境并在vscode中使用
+
+接下来的操作均需要在命令行中进行，你可以继续使用Windows自带的cmd终端，也可以去电脑搜索栏搜索anaconda prompt，这是你下载的anaconda自带的终端。我们不妨在接下来的操作时试用一下anaconda prompt。
+
+在prompt终端输入`conda create -n name_of_venv python=3.13 -y`，其中name可以替换为任何纯英文的名字，在本文我们姑且用name_of_venv代替；python的值是你想要的解释器版本。这个语句会建立一个名为name_of_venv的虚拟环境，并在其中自动安装一个python3.13的解释器。构建完成后，输入`conda activate name_of_venv`，成功激活并进入到这一虚拟环境后，你会发现你命令行前面的(base)变成了(name_of_venv)。之后你可以在这个虚拟环境中尽情pip你需要的库了，这些在虚拟环境中pip下的库并不能在其他环境中使用，是独立使用在这个虚拟环境下的。
+
+之后回到你的vscode，点开你写好的.py测试文件，点击右下角下边框3.xx.x的python解释器版本标识（如果没有标识的话就直接去点击运行你的.py程序），这样vscode上方会跳出选择解释器的选项，在这里你能看到你不同解释器和虚拟环境的所在路径，选择你刚刚配好的虚拟环境即可。如果你在这里没看到你的虚拟环境也没关系，可以点击Enter interpreter path手动添加解释器的位置，Windows系统中的conda解释器一般位于C:\\Users\\用户名\\Anaconda3\\envs\\虚拟环境名\\python.exe。
+
+当你成功运行了程序，成功使用了虚拟环境中的第三方库时，你的虚拟环境就确定可以正常使用了！
+
+### 第三步：了解更多的conda指令
+
+刚才我们接触了一共三个conda指令：
+- conda --version
+- conda create
+- conda activate
+
+create语句-n（或者--name）后跟的是创建的环境名字和python版本的设置，可以在版本设置后紧接着用空格分隔填入若干库名，创建时会自动将这些库添加在虚拟环境中。-y是为了方便自动确认，原则上可以去掉，去掉的话，在输入完create语句后会跳出将要安装的包列表，并询问是否继续（类似于Proceed \(\[y\]/n\)?），你需要手动再输入一个y。create语句也具备复制功能，使用`conda create -n 新环境 --clone 旧环境`即可
+更多的常用conda指令：
+- conda deactivate：退出当前虚拟环境
+- conda info --envs ///或/// conda info -e ///或/// conda env list：查看已有的虚拟环境列表
+- conda remove --name 环境名 --all ///或/// conda remove -p 环境所在位置的绝对路径（与环境同名的文件夹） --all：删除某一环境
+- conda list ///或/// conda list --name 环境名：查看你当前环境/指定环境已安装的python包
+- conda install 包名 ///和/// conda unstall 包名：一种类似于pip的使用包管理器安装python包的安装方式
+
+更多内容可以去查阅官方文档或相关教程。
+
+## 结语
+
+至此，你应该已经可以流畅的使用vscode进行python项目的编写和运行了。如果你也给你的vscode配置了C环境，那你或许对vscode这个软件拥有了更深刻的了解和认识。vscode只是一款可以加插件的文本编辑器，没有插件的话和记事本没什么区别，优秀的是生态，是不断从生态中受益并不断为生态提供活水的开发者们。好好和你的IDE磨合磨合，多写多练，一同做优秀的开发者，祝学习愉快、工作顺利！
+
+
+
+
+# 评论区
+PS：评论之后，你的GitHub账号会在我的仓库的Issues模块留下评论，此时有可能会自动关注这条Issue，之后再有人有新的评论时，可能会向你GitHub账号的邮箱发送提醒。
+
+如果你不想接收这一提醒，可以去到[我仓库的Issue界面](https://github.com/kuiningzzzz/kuiningzzzz.github.io/issues)，找到你评论所在区域对应的Issue，并点进去后在右下角的Notifications选项中取消掉Subscribe。
+
+如果你想一劳永逸再也不自动订阅这一提醒，可以去你自己账号的Settings界面，点击左边Notifications，在右半Subscriptions中的Customize email updates中取消掉Comments on Issues选项并点击Save保存确定即可。
+
+<script src="https://utteranc.es/client.js"
+        repo="kuiningzzzz/kuiningzzzz.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
