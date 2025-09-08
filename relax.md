@@ -3,6 +3,21 @@ layout: default
 title: 放松一下
 ---
 
+# 友链
+
+<div class="grid">
+  <div class="project-card">
+    <img src="assets/images/friend1.jpg" alt="项目1">
+    <h3>Qiyu Zhang</h3>
+    <p>我的舍友，主页有或有趣或使用或有趣且实用的日志、笔记、随写</p>
+    <div class="button-container">
+      <a href="https://qiyuzhang-stu.github.io" target="_blank">进入主页</a>
+    </div>
+  </div>
+</div>
+
+
+
 # 娱乐生活
 
 ## 关于音乐
