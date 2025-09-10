@@ -46,7 +46,7 @@ title: 攻略
 
   <div class="project-card">
   <h2>文明六mod编写</h2>
-  <p>施工中......</p>
+  <p>目前更新完的内容有：更改游戏文本、自定义游戏单位。正在准备写自定义文明的攻略，但是工程量有点大，可能鸽一阵子...</p>
     <div class="button-container">
       <a href="{{ '/tutorial/civi_sixth_mod' | relative_url }}" class="secondary">查看攻略</a>
     </div>
