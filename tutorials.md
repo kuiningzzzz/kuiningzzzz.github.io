@@ -42,7 +42,7 @@ title: 攻略
 
   <div class="project-card">
   <h2>在Windows系统上搭建Ubuntu双系统</h2>
-  <p>施工中....</p>
+  <p>涉及系统安装U盘的制作、磁盘手动分区，施工中....</p>
     <div class="button-container">
       <a href="{{ '/tutorial/ubuntu_two_OS' | relative_url }}" class="secondary">查看攻略</a>
     </div>
