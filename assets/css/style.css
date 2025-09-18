@@ -16,6 +16,17 @@ body {
   padding: 20px;
 }
 
+/* markdown内容区域样式 */
+.markdown-body {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* 顶部导航栏 */
 .site-header {
   background-color: #0c65ff;
@@ -72,6 +83,38 @@ body {
   width: 100%;
   border-radius: 50%;
   display: block;
+}
+
+/* 文档中的图片响应式样式 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 主要内容区域样式 */
+main {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em auto;
+  display: block;
+}
+
+/* 确保项目卡片和头像不受通用样式影响 */
+.project-card img,
+.avatar {
+  margin: 0;
+  box-shadow: none;
+  border-radius: inherit;
 }
 
 /* 多列布局 */
@@ -425,5 +468,24 @@ footer {
   #gameCanvas {
     width: 100%;
     height: 200px;
+  }
+
+  /* 移动设备上的图片样式 */
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 1em auto;
+  }
+
+  main img {
+    max-width: 100%;
+    width: auto;
+  }
+
+  /* 容器在移动设备上的调整 */
+  .container {
+    width: 95%;
+    padding: 15px;
   }
 }
