@@ -15,6 +15,7 @@ title: 攻略
 ## 正经攻略
 
 <div class="grid">
+
   <div class="project-card">
   <h2>vscode中的c/c++环境配置</h2>
   <p>针对Windows端的C/C++环境配置以及Cmake工具的使用</p>
@@ -38,6 +39,15 @@ title: 攻略
       <a href="{{ '/tutorial/python_in_vscode' | relative_url }}" class="secondary">查看攻略</a>
     </div>
   </div>
+
+  <div class="project-card">
+  <h2>在Windows系统上搭建Ubuntu双系统</h2>
+  <p>施工中....</p>
+    <div class="button-container">
+      <a href="{{ '/tutorial/ubuntu_two_OS' | relative_url }}" class="secondary">查看攻略</a>
+    </div>
+  </div>
+
 </div>
 
 ## 不正经攻略
