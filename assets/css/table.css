@@ -1,0 +1,149 @@
+/* AI太好用了你们知道吗（doge */
+/* 本文件全部由AI生成 */
+
+/* 表格基础样式 - 直接应用于所有 table 元素 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.95em;
+}
+
+/* 表格外层容器自动滚动处理 */
+.markdown-body {
+  overflow-x: auto;
+}
+
+.markdown-body table {
+  min-width: 600px;
+  white-space: nowrap;
+}
+
+/* 表头样式 */
+thead th {
+  background-color: #0c65ff;
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 15px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9em;
+}
+
+/* 表格单元格基础样式 */
+td, th {
+  padding: 12px 15px;
+  border: none;
+  vertical-align: middle;
+  line-height: 1.4;
+}
+
+/* 表格主体行样式 */
+tbody tr {
+  border-bottom: 1px solid #f4f4f4;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody tr:hover {
+  background-color: rgba(12, 101, 255, 0.05);
+  cursor: default;
+}
+
+/* 表格数据单元格样式 */
+tbody td {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+}
+
+/* 第一列样式（通常是索引或关键数据） */
+tbody td:first-child {
+  font-weight: 600;
+  color: #0c65ff;
+}
+
+/* 最后一行去除底部边框 */
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* 表格响应式处理 - 直接应用于 table */
+table {
+  min-width: 600px;
+}
+
+/* 当表格宽度超过容器时自动滚动 */
+@media (max-width: 600px) {
+  table {
+    min-width: 100%;
+    white-space: normal;
+    display: table;
+  }
+}
+
+/* 小屏幕适配 */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.85em;
+  }
+  
+  td, th {
+    padding: 10px 12px;
+  }
+  
+  thead th {
+    padding: 10px 12px;
+    font-size: 0.8em;
+  }
+}
+
+/* 超小屏幕适配 */
+@media (max-width: 480px) {
+  table {
+    font-size: 0.8em;
+  }
+  
+  td, th {
+    padding: 8px 10px;
+  }
+  
+  thead th {
+    padding: 8px 10px;
+    font-size: 0.75em;
+  }
+}
+
+/* 为包含十六进制或代码的单元格设置等宽字体 */
+/* 自动检测可能包含十六进制的单元格 */
+td:nth-child(2), td:nth-child(5) {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  background-color: rgba(45, 45, 45, 0.05);
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* 为可能的数字列右对齐 */
+td:nth-child(1), td:nth-child(4) {
+  text-align: right;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+}
+
+/* 字符显示列居中 */
+td:nth-child(3), td:nth-child(6) {
+  text-align: center;
+  font-weight: 600;
+}
