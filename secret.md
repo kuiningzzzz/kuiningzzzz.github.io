@@ -15,6 +15,7 @@ title: 秘密基地
 
 # 一些杂碎笔记
 
+- [c/c++语法](./notes/cpp_grammer.md)
 - [Git常用指令](./notes/git_cmd.md)
 - [Linux命令行常用指令](./notes/linux_cmd.md)
 - [RESTfulAPI与flask框架](./notes/RESTful&flask.md)
