@@ -47,12 +47,12 @@ td, th {
 
 /* 表格主体行样式 */
 tbody tr {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f0f0f0;
   transition: background-color 0.2s ease;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #fdfdfd;
+  background-color: #f8f9fa;
 }
 
 tbody tr:nth-child(odd) {
@@ -60,7 +60,7 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:hover {
-  background-color: rgba(12, 101, 255, 0.05);
+  background-color: rgba(12, 101, 255, 0.08);
   cursor: default;
 }
 
@@ -70,11 +70,11 @@ tbody td {
   font-weight: 400;
 }
 
-/* 第一列样式（通常是索引或关键数据） */
-tbody td:first-child {
+/* 第一列样式会被下面的nth-child规则覆盖，这里注释掉避免冲突 */
+/* tbody td:first-child {
   font-weight: 600;
   color: #0c65ff;
-}
+} */
 
 /* 最后一行去除底部边框 */
 tbody tr:last-child {
@@ -127,23 +127,41 @@ table {
   }
 }
 
-/* 为包含十六进制或代码的单元格设置等宽字体 */
-/* 自动检测可能包含十六进制的单元格 */
-td:nth-child(2), td:nth-child(5) {
+/* 为ASCII表格优化的列样式 */
+/* 十进制数字列 (第1、4、7、10列) */
+td:nth-child(1), td:nth-child(4), td:nth-child(7), td:nth-child(10) {
+  text-align: right;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
-  background-color: rgba(45, 45, 45, 0.05);
-  border-radius: 4px;
+  color: #0c65ff;
+  font-weight: 600;
+}
+
+/* 十六进制数字列 (第2、5、8、11列) */
+td:nth-child(2), td:nth-child(5), td:nth-child(8), td:nth-child(11) {
+  text-align: center;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  color: #666;
+  font-weight: 600;
   font-size: 0.9em;
 }
 
-/* 为可能的数字列右对齐 */
-td:nth-child(1), td:nth-child(4) {
-  text-align: right;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
-}
-
-/* 字符显示列居中 */
-td:nth-child(3), td:nth-child(6) {
+/* 字符显示列 (第3、6、9、12列) */
+td:nth-child(3), td:nth-child(6), td:nth-child(9), td:nth-child(12) {
   text-align: center;
   font-weight: 600;
+  color: #333;
+  font-size: 1.1em;
+}
+
+/* 为不同列组添加subtle的视觉分隔 */
+td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+  border-left: 2px solid #f0f0f0;
+}
+
+td:nth-child(7), td:nth-child(8), td:nth-child(9) {
+  border-left: 2px solid #f0f0f0;
+}
+
+td:nth-child(10), td:nth-child(11), td:nth-child(12) {
+  border-left: 2px solid #f0f0f0;
 }
