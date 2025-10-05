@@ -14,9 +14,7 @@ title: 放松一下
       <a href="https://qiyuzhang-stu.github.io" target="_blank">进入主页</a>
     </div>
   </div>
-</div>
 
-<div class="grid">
   <div class="project-card">
     <img src="assets/images/friend2.jpg" alt="项目1">
     <h3>FunctionHook</h3>
