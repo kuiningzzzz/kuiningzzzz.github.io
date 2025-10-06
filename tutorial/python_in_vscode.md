@@ -35,7 +35,7 @@ conda的作用实际上是将你不同的python环境打包成虚拟环境供程
 
 ### 第一步：安装anaconda
 
-可以直接去[官网](https://www.anaconda.com/download)下载，不过更方便的做法是去[清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)下载，挑选适合自己操作系统的版本即可。下载好后双击安装包进行安装，记得勾选Add PATH和Register as default两个Advanced Options选项。安装后依然去cmd控制台测试，输入`conda --version`返回版本号即成功。
+可以直接去[官网](https://www.anaconda.com/download)下载，不过更方便的做法是去[清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)下载，挑选适合自己操作系统的版本即可。下载好后双击安装包进行安装，记得勾选Add PATH和Register as default两个Advanced Options选项。安装后依然去cmd控制台测试，输入`conda --version`返回版本号即成功。（如果conda指令不好用的话，可能是环境变量没能成功添加，将conda原位置的文件夹以及文件夹下的condabin文件夹的绝对路径都加到PATH环境变量里即可）
 
 ### 第二步：使用conda指令构建环境并在vscode中使用
 
@@ -64,6 +64,27 @@ create语句-n（或者--name）后跟的是创建的环境名字和python版本
 - conda install 包名 ///和/// conda unstall 包名：一种类似于pip的使用包管理器安装python包的安装方式
 
 更多内容可以去查阅官方文档或相关教程。
+
+### 第四步：更多设置
+
+该模块仍在火热更新中，欢迎更多评论反馈需求！
+
+#### 移动虚拟环境的默认创建位置
+
+虚拟环境一般会创建于C盘下，通过`conda env list`可以看到每个环境所在的路径位置。此外，一些缓存文件也会默认存储在C盘。这些事情有时会让人产生C盘焦虑。
+
+输入`conda info`，返回的信息中，`package cache`和`envs directories`后的内容就是anaconda相关文件的默认存储路径。我们的目的就是修改这些。
+
+去路径`C:/Users/用户名`中找到一个名为`.condarc`的文件，如果没找到的话，在anaconda prompt里运行`conda config --set show_channel_urls yes`即可。使用记事本或者vscode等文本编辑器打开这个文件，或许会看到一些已有的内容，这是用于配置包源、代理、存储等设置的文件。已有的其他内容不用修改，我们要修改`envs_dirs`和`pkgs_dirs`这两个参数，如果没有的话就在后面添加即可，内容如下：
+
+```yaml
+envs_dirs:
+        - 一个绝对路径，这个是你设置的虚拟环境的存储位置
+pkgs_dirs:
+        - 一个绝对路径，这个是你设置的缓存的存储位置
+```
+
+保存退出之后即生效，可以通过`conda info`指令去看之前的两个信息是否发生改动。
 
 ## 结语
 
