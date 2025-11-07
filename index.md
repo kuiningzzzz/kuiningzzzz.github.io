@@ -29,5 +29,6 @@ title: 首页
     <p>2025.09.07：更新VScode中C环境配置攻略和GitHub Pages搭建攻略</p>
     <p>2025.09.08：新增友链；更新VScode中python环境配置攻略</p>
     <p>2025.09.20：更新Ubuntu双系统搭建攻略</p>
+    <p>2025.11.07：relax版块新增软件推荐栏目</p>
   </div>
 </div>
