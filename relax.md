@@ -45,7 +45,7 @@ title: 放松一下
 
 请不要使用这种程序进行牟利，引发版权与隐私问题后果自负！
 
-<a href=./assets/download/relax/Ncm_to_mp3.exe download>点击此处即可下载</a>
+[点击此处即可下载](./assets/download/relax/Ncm_to_mp3.exe)
 
 使用方法是：将.ncm文件拖动到这个.exe文件上即可在原文件目录下生成一个与.ncm文件同名的.mp3文件。
 
